@@ -64,28 +64,73 @@ Complete the following tasks and assign the results to the specified variables. 
   - Extract the word "Bootcamp" from the string using slice and assign the result to a variable named extractedBootcamp.
 
 */
+//Practice Problem #1
+//Activity 1: Searching Strings
+let searchStr = "Learning JavaScript is fun!";
+// check if "JavaScript" is in the string
+let outputstr = searchStr.includes("JavaScript");
+console.log(outputstr);
+// find the position of "fun"
+let posStr = searchStr.indexOf("fun");
+console.log(posStr);
+//Activity 2: Transforming Strings
+let inputStr = " CODE BOOTCAMP ";
+//convert to lowercase and eliminate white spaces
+let transformedStr = inputStr.trim().toLowerCase();
+console.log(transformedStr);
+let replaceStr = transformedStr.replace("bootcamp","JavaScript");
+console.log(replaceStr);
+
+//Activity 3: Breaking Apart a Sentence
+let sentenceStr = "Coding is fun and educational";
+//split the sentence at ""
+arrayWord = sentenceStr.split(" ");
+console.log(arrayWord);
+
+//Activity 4: Retrieving Substrings
+let word = "Bootcamp";
+//retrive the first character 
+let firstChar = word.charAt(0);
+console.log(firstChar);
+//Extract the word "camp" from "Bootcamp" using slice
+let sliceWord = word.slice(4);
+console.log(sliceWord);
+
+//Advanced Challenge
+let customerDet = `Customer: John Doe\nOrder: Apple, Banana, Grape\nTotal: $20.50`;
+//Extract the customer name.
+let customerName = customerDet.split("\n")[0].split(": ")[1];
+console.log(customerName);
+//Split the order into an array of items.
+let orderArray = customerDet.split("\n")[1].split(": ")[1].split(", ");
+console.log(orderArray);
+//Convert the total price to uppercase (e.g., "TOTAL: $20.50").
+let totalPrice = `Total: ${customerDet.split('\n')[2].split(": ")[1]}`;
+console.log(totalPrice);
+
+
 
 //Starter Code
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
+let hasJavaScript = inputString.includes("JavaScript")  ; // Your code here
+let codingPosition = inputString.indexOf("Coding"); // Your code here
+let startsWithWelcome = inputString.startsWith("Welcome"); // Your code here
+let endsWithToday = inputString.endsWith("today."); // Your code here
 
 // 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
+let lowercaseString = inputString.toLowerCase(); // Your code here
+let uppercaseString = inputString.toUpperCase(); // Your code here
+let trimmedString = inputString.trim(); // Your code here
+let replacedString = inputString.replace("JavaScript","coding"); // Your code here
 
 // 3. Breaking Apart
-let wordsArray; // Your code here
+let wordsArray = inputString.split(" "); // Your code here
 
 // 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+let firstCharacter = trimmedString.charAt(0); // Your code here
+let extractedBootcamp = inputString.slice(24,32); // Your code here
 
 // Log all results
 console.log({
